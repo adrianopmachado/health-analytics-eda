@@ -25,7 +25,7 @@ A etapa de exploração estatística revelou comportamentos vitais para a gestã
 * **Fatores de Baixo Impacto Isolado:** Variáveis como Região, Gênero Biológico e Número de Dependentes apresentaram baixa correlação direta com os picos de sinistralidade.
 
 ## 5. Arquitetura do Dashboard (Power BI)
-<img width="1317" height="735" alt="Captura de tela 2026-09-22 115041" src="https://github.com/user-attachments/assets/87441992-9d37-42a4-a0e5-f6aec6ffe38d" />
+<img width="1322" height="742" alt="image" src="https://github.com/user-attachments/assets/f767d6c9-9447-42ef-91d9-bff92d7e6482" />
 
 O painel foi estruturado com foco em usabilidade executiva, seguindo o padrão de leitura em "Z":
 1. **Menu de Contexto:** Filtros suspensos (Dropdown) para simulação de cenários segmentados por Região, Sexo e Dependentes.
