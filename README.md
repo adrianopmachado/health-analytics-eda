@@ -4,7 +4,7 @@
 **Área de Atuação:** Análise de Dados e Business Intelligence  
 
 ## 1. Visão Geral do Projeto
-Este projeto apresenta uma solução analítica de ponta a ponta voltada para o setor de saúde suplementar e recursos humanos. O objetivo principal foi diagnosticar os direcionadores de custo (sinistralidade) de uma carteira de plano de saúde corporativo e entregar uma ferramenta tática para a tomada de decisão gerencial. A solução foi dividida em duas grandes fases: a exploração estatística em Python e a construção de um painel executivo interativo no Power BI.
+Este projeto apresenta uma solução analítica de ponta a ponta voltada para o setor de saúde suplementar e recursos humanos. O objetivo principal foi diagnosticar os direcionadores de custo (sinistralidade) de uma carteira de plano de saúde corporativo e entregar uma ferramenta tática para a tomada de decisão gerencial. A solução foi dividida em duas fases: a exploração estatística em Python e a construção de um painel executivo interativo no Power BI.
 
 ## 2. Conjunto de Dados e Qualidade
 * **Fonte dos Dados:** Este conjunto de dados foi originalmente disponibilizado pela plataforma educacional **Preditiva** para fins de estudo e desenvolvimento de portfólio.
