@@ -1,53 +1,63 @@
-# Portfólio de Dados: Health Analytics – Gestão de Custos e Perfil da Carteira
+# Simulador de Custos Médicos – Análise de Sinistralidade em Planos de Saúde
 
-**Autor:** Adriano Parente Machado  
-**Área de Atuação:** Análise de Dados e Business Intelligence  
+**Autor:** Adriano Parente Machado
+**Área:** Análise de Dados e Business Intelligence
 
-🔗 **Acesse a Aplicação Online:** [Simulador de Custos Médicos](https://simulador-custos-medicos.streamlit.app)
+🔗 [Acesse a aplicação online](https://simulador-custos-medicos.streamlit.app)
 
 ---
 
-## 1. Visão Geral do Projeto
-Este projeto apresenta uma solução analítica de ponta a ponta voltada para o setor de saúde suplementar e recursos humanos. O objetivo principal foi diagnosticar os direcionadores de custo (sinistralidade) de uma carteira de plano de saúde corporativo e entregar ferramentas práticas para a tomada de decisão gerencial e provisionamento de orçamento. 
+## Sobre o projeto
 
-A solução foi estruturada em três grandes pilares:
-1. **Análise Exploratória de Dados (EDA):** Diagnóstico estatístico em Python.
-2. **Business Intelligence:** Painel executivo interativo desenvolvido no Power BI.
-3. **Machine Learning e Web App:** Modelo preditivo de custos integrado a uma aplicação web interativa em Streamlit.
+Este projeto analisa os principais fatores que impulsionam os custos de um plano de saúde corporativo e transforma essa análise em ferramentas úteis para RH e gestão de orçamento: um modelo preditivo de custos, um simulador web e um painel executivo no Power BI.
 
-## 2. Conjunto de Dados e Qualidade
-* **Fonte dos Dados:** Originalmente disponibilizado pela plataforma educacional **Preditiva** para fins de estudo e desenvolvimento de portfólio.
-* **Volume:** 1.337 registros de colaboradores.
-* **Integridade:** Base de dados consistente, sem valores ausentes. Um registro duplicado foi identificado e tratado durante a etapa de limpeza.
-* **Variáveis Analisadas:** Idade, Sexo, Índice de Massa Corporal (IMC), Quantidade de Filhos, Status de Tabagismo, Região e Custo de Saúde (Variável-alvo).
+O trabalho passou por três etapas:
 
-## 3. Stack Tecnológico e Ferramentas
-* **Python & Machine Learning:** Pandas, Scikit-Learn, Joblib para a construção e serialização do modelo preditivo de custos.
-* **Streamlit:** Desenvolvimento da interface web e deploy em produção na nuvem (Streamlit Community Cloud).
-* **Power BI & DAX:** Camada de visualização, modelagem de métricas de negócio e indicadores de performance (KPIs).
-* **Design UI/UX:** Interface personalizada com paleta corporativa (*Dark Theme* / Teal & Beige) focada em experiência do utilizador.
+1. **Análise exploratória em Python** — entender o comportamento dos dados e identificar os principais direcionadores de custo.
+2. **Painel no Power BI** — visualização executiva dos indicadores da carteira.
+3. **Modelo preditivo + aplicação web** — um modelo de machine learning integrado a um app em Streamlit, para simular o custo de um novo colaborador com base no seu perfil.
 
-## 4. Principais Descobertas (Insights de Negócio)
-A etapa de exploração estatística revelou comportamentos vitais para a gestão financeira da carteira:
-* **A Ilusão da Média Financeira:** A média de gastos (1.327 reais) não reflete a realidade da maior parte da empresa, sendo distorcida por eventos médicos extremos (outliers). A métrica ideal adotada para o negócio foi a **Mediana** (938 reais).
-* **O Peso do Tabagismo e da Obesidade:** O status de fumante demonstrou ser o maior fator de alavancagem de custos. Quando analisado em conjunto com as faixas de Obesidade, o custo mediano chega a quadruplicar em relação ao perfil de peso normal e não fumante.
-* **Fatores de Baixo Impacto Isolado:** Variáveis como Região, Gênero Biológico e Número de Dependentes apresentaram baixa correlação direta com os picos de sinistralidade.
+## Os dados
 
-## 5. Aplicação Web: Simulador Preditivo de Custos
-Como evolução natural do projeto, foi desenvolvido um aplicativo web interativo onde gestores de RH e analistas podem simular o impacto financeiro mensal de um novo colaborador com base no seu perfil demográfico e clínico.
+- **Fonte:** base disponibilizada pela plataforma educacional Preditiva, usada aqui para fins de estudo e portfólio.
+- **Volume:** 1.337 registros de colaboradores.
+- **Qualidade:** sem valores ausentes; um registro duplicado foi encontrado e removido na limpeza.
+- **Variáveis:** idade, sexo, IMC, número de filhos, status de tabagismo, região e custo de saúde (variável-alvo).
 
-* **Onde testar:** [simulador-custos-medicos.streamlit.app](https://simulador-custos-medicos.streamlit.app)
-* **Estrutura do Repositório:**
-  * `app.py`: Código principal da interface web.
-  * `models/`: Contém o modelo preditivo treinado (`modelo_predicao_custos.pkl`).
-  * `dados/`: Bases tratadas utilizadas nas análises.
-  * `Power BI/`: Relatório executivo em formato `.pbix`.
+## Principais achados
 
-## 6. Arquitetura do Dashboard (Power BI)
+- **A média engana.** O gasto médio (R$ 1.327) é puxado para cima por casos extremos de sinistralidade. A mediana (R$ 938) representa melhor o comportamento típico da carteira, e foi a métrica adotada para decisões de negócio.
+- **Tabagismo é o fator que mais pesa.** Sozinho, já é o maior direcionador de custo. Combinado com obesidade, o custo mediano chega a quadruplicar em relação a um perfil não fumante e com peso normal.
+- **Região, gênero e número de dependentes** têm correlação baixa com os picos de custo — não são bons preditores isoladamente.
+
+## Stack utilizada
+
+- **Python:** Pandas, Scikit-Learn e Joblib para construir e salvar o modelo preditivo.
+- **Streamlit:** interface web e deploy em nuvem (Streamlit Community Cloud).
+- **Power BI + DAX:** camada de visualização e cálculo de KPIs.
+- **UI:** tema escuro personalizado (paleta teal & beige).
+
+## Aplicação web
+
+O simulador permite que gestores de RH estimem o impacto financeiro mensal de um novo colaborador a partir do seu perfil demográfico e clínico.
+
+👉 [simulador-custos-medicos.streamlit.app](https://simulador-custos-medicos.streamlit.app)
+
+**Estrutura do repositório:**
+```
+app.py              → código principal da aplicação web
+models/              → modelo treinado (modelo_predicao_custos.pkl)
+dados/                → bases tratadas usadas nas análises
+Power BI/            → relatório executivo (.pbix)
+```
+
+## Dashboard (Power BI)
+
 <img width="1322" height="742" alt="image" src="https://github.com/user-attachments/assets/f767d6c9-9447-42ef-91d9-bff92d7e6482" />
 
-O painel foi estruturado com foco em usabilidade executiva, seguindo o padrão de leitura em "Z":
-1. **Menu de Contexto:** Filtros suspensos (Dropdown) para simulação de cenários segmentados por Região, Sexo e Dependentes.
-2. **Indicadores-Chave (KPIs):** Cartões de leitura rápida apontando Volume de Vidas, Custo Mediano e Alertas Comportamentais (% Fumantes e % Obesidade).
-3. **Detalhamento Causal:** Gráficos de contraste destacando o impacto financeiro do tabagismo e a progressão dos custos através das categorias do IMC.
-4. **Matriz de Risco Combinado:** Um mapa de calor tático cruzando Tabagismo vs. IMC, formatado condicionalmente para evidenciar imediatamente o quadrante de maior sangramento financeiro da carteira.
+O painel foi organizado em quatro blocos:
+
+1. **Filtros de contexto** — segmentação por região, sexo e dependentes.
+2. **KPIs principais** — volume de vidas, custo mediano, % fumantes, % obesidade.
+3. **Análise causal** — gráficos mostrando o impacto do tabagismo e a progressão de custo por faixa de IMC.
+4. **Mapa de risco combinado** — heatmap cruzando tabagismo x IMC, destacando os grupos de maior custo.
