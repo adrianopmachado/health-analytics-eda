@@ -1,6 +1,6 @@
 # Simulador de Custos Médicos – Análise de Sinistralidade em Planos de Saúde
 
-**Autor:** Adriano Parente Machado
+**Autor:** Adriano Parente Machado <br>
 **Área:** Análise de Dados e Business Intelligence
 
 🔗 [Acesse a aplicação online](https://simulador-custos-medicos.streamlit.app)
