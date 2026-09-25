@@ -45,10 +45,12 @@ O simulador permite que gestores de RH estimem o impacto financeiro mensal de um
 
 **Estrutura do repositório:**
 ```
-app.py              → código principal da aplicação web
-models/             → modelo treinado (modelo_predicao_custos.pkl)
-dados/              → bases tratadas usadas nas análises
 Power BI/           → relatório executivo (.pbix)
+dados/              → bases usadas nas análises
+models/             → modelo treinado (modelo_predicao_custos.pkl)
+notebooks/          → análise exploratória e treinamento do modelo
+app.py              → código principal da aplicação web
+requirements.txt    → bibliotecas utilizadas na aplicação
 ```
 
 ## Dashboard (Power BI)
