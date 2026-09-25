@@ -37,6 +37,26 @@ O trabalho passou por três etapas:
 - **Power BI + DAX:** camada de visualização e cálculo de KPIs.
 - **UI:** tema escuro personalizado (paleta teal & beige).
 
+## Modelo Preditivo
+
+Foi utilizada uma **Regressão Linear**, treinada com 80% da base e validada nos 20% restantes.
+
+| Métrica | Valor |
+|---|---|
+| R² (poder de explicação) | 0.80 |
+| MAE (erro médio absoluto) | R$ 433,11 |
+| RMSE (raiz do erro quadrático médio) | R$ 603,08 |
+
+O modelo explica cerca de 80% da variação nos custos de saúde, com um erro médio de aproximadamente R$ 433 por colaborador — um resultado sólido considerando a simplicidade do modelo.
+
+**Variáveis com maior peso no custo (coeficientes):**
+- Ser fumante: +R$ 2.303,93
+- Obesidade Grau II: +R$ 826,16
+- Obesidade Grau III: +R$ 768,55
+- Obesidade Grau I: +R$ 689,75
+
+Esses coeficientes confirmam o que a análise exploratória já indicava: tabagismo e obesidade são, de longe, os maiores direcionadores de custo.
+
 ## Aplicação web
 
 O simulador permite que gestores de RH estimem o impacto financeiro mensal de um novo colaborador a partir do seu perfil demográfico e clínico.
