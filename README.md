@@ -54,7 +54,7 @@ requirements.txt    → bibliotecas utilizadas na aplicação
 ```
 
 ## Dashboard (Power BI)
-![dashboard](images/dashboard.png)
+![dashboard](images/Dashboard.png)
 
 O painel foi organizado em quatro blocos:
 
